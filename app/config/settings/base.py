@@ -21,7 +21,9 @@ DEFAULT_APP = [
     "django.contrib.staticfiles",
 ]
 
-CREATED_APP = []  # custom apps goes here
+CREATED_APP = [
+    "apps.core.apps.CoreConfig",
+]  # custom apps goes here
 
 THIRD_PARTY_APP = []  # third party apps goes here
 

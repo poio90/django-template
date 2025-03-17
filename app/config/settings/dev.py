@@ -2,7 +2,7 @@ import os
 
 from .base import *
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY","django-insecure-ony7(@81^+^2+75*aujva1)##1brz9_&)7(9_@v65yttry*3ow")
 DEBUG = os.getenv("DEBUG", True)
 
 ALLOWED_HOSTS = ["*"]
