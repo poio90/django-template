@@ -1,4 +1,4 @@
-# django-boilerplate
+# django-template
 
 Are you tired of going through the same process whenever you want to start a new project in Django? To set up a production standard Django project can be overwhelming at times.
 
