@@ -10,12 +10,17 @@ Here, I present to you this boilerplate that set up an enterprise standard Djang
 
 ## Set Up
 
-- Clone the repo `git clone https://github.com/Eyongkevin/django-boilerplate.git`
-- Change the project name to your own project name: `mv django-boilerplate/ <your-project-name>`
-- Add an `.env` file with the following configurations
+- Clone the repo `git clone https://github.com/poio90/django-template.git`
+- Change the project name to your own project name: `mv django-template/ <your-project-name>`
+- Add an `.env` folder with .env and .db_env files with the following configurations
 
 ```
+DEBUG=True
 SECRET_KEY=
+```
+
+```
+.db_env
 DB_NAME=
 DB_USER=postgres
 DB_PWD=postgres
@@ -111,7 +116,7 @@ make dev-startapp app=<app-name>
 
 #### core app
 
-In the apps/ directory, we have an app called `core` and this should contain common stuffs that will be used in all other apps. For example, this app has a model called `CreatedModifiedAbstract` in the abstract/ folder. This is an abstract model that defines two fields; `created_at` and `modified_at`.
+In the apps/ directory, we have an app called `core` and this should contain common stuffs that will be used in all other apps. For example, this app has a model called `CreatedUpdatedAbstract` in the abstract/ folder. This is an abstract model that defines two fields; `created_at` and `updated_at`.
 
 ### Makefile
 
