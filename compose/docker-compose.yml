@@ -2,29 +2,31 @@ version: '3.9'
 
 services:
   web:
-    build: ./local
+    build: 
+      context: ../
+      dockerfile: ./compose/local/Dockerfile
     container_name: django_app
-    command: gunicorn myproject.wsgi:application --bind 0.0.0.0:8000
+    command: >
+      sh -c " python manage.py runserver 0.0.0.0:8000"
     volumes:
-      - .:/app
+      - ../app:/app
     ports:
       - "8000:8000"
-    depends_on:
-      - db
-    environment:
-      - DEBUG=False
-      - DATABASE_URL=postgres://postgres:postgres@db:5432/mydatabase
-
-  db:
-    image: postgres:15
-    container_name: postgres_db
+    # depends_on:
+    #   - db
+    env_file:
+      - .env/.env
+      - .env/.db_env
     restart: always
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: mydatabase
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
 
-volumes:
-  postgres_data:
+#   db:
+#     image: postgres:15
+#     container_name: postgres_db
+#     restart: always
+#     env_file:
+#       - .env/.db_env
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+
+# volumes:
+#   postgres_data:
