@@ -3,10 +3,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-ony7(@81^+^2+75*aujva1)##1brz9_&)7(9_@v65yttry*3ow"
-
-DEBUG = True
-
 ALLOWED_HOSTS = []
 
 
