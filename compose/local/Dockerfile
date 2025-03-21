@@ -7,7 +7,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Instalar dependencias del sistema necesarias
-RUN apk add --no-cache gcc musl-dev libffi-dev postgresql-dev
+RUN apk add --no-cache gcc musl-dev libffi-dev postgresql-dev gettext
 
 # install dependencies
 RUN pip install --upgrade pip

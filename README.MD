@@ -15,6 +15,7 @@ Here, I present to you this boilerplate that set up an enterprise standard Djang
 - Add an `.env` folder with .env and .db_env files with the following configurations
 
 ```
+.env
 DEBUG=True
 SECRET_KEY=
 ```
@@ -86,11 +87,11 @@ git remote set-url origin <your-repo-url>.git
 - Set the main branch: `git branch -M main`
 - Push to origin: `git push -u origin main`
 
-## Boilerplate Structure
+## Structure
 
 ### Settings
 
-In the `config/` folder, we have another folder; `settings/` that contains all the settings based on the environment you are running at. This boilerplate has two; `base.py` and `dev.py`. If you are developing locally, you will be using the `dev.py`. If you want to go to production, then you can create a setting for production. For example `prod.py`
+In the `config/` folder, we have another folder; `settings/` that contains all the settings based on the environment you are running at. This template has two; `base.py` and `dev.py`. If you are developing locally, you will be using the `dev.py`. If you want to go to production, then you can create a setting for production. For example `prod.py`
 
 ### Requirements
 
@@ -114,7 +115,7 @@ Or use this Makefile command from the working directory
 make dev-startapp app=<app-name>
 ```
 
-#### core app
+#### Core app
 
 In the apps/ directory, we have an app called `core` and this should contain common stuffs that will be used in all other apps. For example, this app has a model called `CreatedUpdatedAbstract` in the abstract/ folder. This is an abstract model that defines two fields; `created_at` and `updated_at`.
 
@@ -123,3 +124,7 @@ In the apps/ directory, we have an app called `core` and this should contain com
 In order to run some very long commands using shortcuts, we have a `Makefile` that contains some commands for makemigrations, migration, installation, runserver and so on.
 
 To run a command from the Makefile, we just run `make <command-name>` where `<command-name>` is a command in the MakefileF
+
+# Supporting Multiple Languages in Django
+
+[https://testdriven.io/blog/multiple-languages-in-django/](https://testdriven.io/blog/multiple-languages-in-django/ "https://testdriven.io/blog/multiple-languages-in-django/")

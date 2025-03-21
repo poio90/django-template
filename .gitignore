@@ -128,3 +128,5 @@ GitHub.sublime-settings
 
 # Cerbot
 **/certbot/*
+
+**.mo
